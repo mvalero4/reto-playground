@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    background: #141414;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Header */
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    background-color: #141414;
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.platform-title{
+    display: none;
+}
+
+.header-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 2rem;
+}
+
+.header-buttons div{
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+
+.header-buttons div:hover{
+    background-color: #fff;
+    color: blue;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Main */
+
+main{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100%;
+    padding-top: 12rem;
+}
+
+.section-title{
+    margin-left: 1rem;
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+#top-text-1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#top-text-2{
+    display: none;
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+}
+
+.top-item{
+    width: 100%;
+    min-width: 225px;
+}
+
+.top-item img{
+    width: 100%;
+}
+
+.top-item:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.top-item:nth-child(1), .top-item:nth-child(2){
+    display: none;
+}
+
+.first{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.second{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.item{
+    min-width: 250px;
+}
+
+.item img{
+    width: 100%;
+}
+
+.item:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+
+
+/* Breakpoints */
+
+@media only screen and (min-width: 768px){
+    .top{
+        flex-direction: row-reverse;
+    }
+
+    .first{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .second{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .item{
+        max-width: 250px;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1280px){
+    .platform-title{
+        display: flex;
+    }
+
+    #top-text-1{
+        display: none;
+    }
+    
+    #top-text-2{
+        display: inline;
+    }
+
+    .top-item:nth-child(1), .top-item:nth-child(2){
+        display: inherit;
+    }
+}
